@@ -1,0 +1,8 @@
+CREATE TABLE review (
+    review_id INT AUTO_INCREMENT PRIMARY KEY,
+	book_id VARCHAR(10) NOT NULL,
+    user_name VARCHAR(50),
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (book_id) REFERENCES book(b_id)
+) DEFAULT CHARSET=utf8;
